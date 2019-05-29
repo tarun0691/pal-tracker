@@ -28,6 +28,10 @@ jar {
         attributes 'Main-Class': 'io.pivotal.pal.tracker.PalTrackerApplication'
     }
 }
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
 }
+
+
+defaultTasks"tasks" 
