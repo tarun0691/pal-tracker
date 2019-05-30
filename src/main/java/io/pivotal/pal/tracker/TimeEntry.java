@@ -10,39 +10,39 @@ public class TimeEntry {
     private LocalDate date;
     private int hours;
 
-    void setProjectId(long projectId) {
+    public void setProjectId(long projectId) {
         this.projectId = projectId;
     }
 
-    void setUserId(long userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
-    void setDate(LocalDate date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    void setHours(int hours) {
+    public void setHours(int hours) {
         this.hours = hours;
     }
 
-    long getProjectId() {
+    public long getProjectId() {
         return projectId;
     }
 
-    long getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    LocalDate getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    int getHours() {
+    public int getHours() {
         return hours;
     }
 
-    void setId(long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
