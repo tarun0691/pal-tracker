@@ -12,14 +12,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.codec.json.Jackson2CodecSupport;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
+import javax.sql.DataSource;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 @SpringBootApplication
 public class PalTrackerApplication {
     @Bean
-    public TimeEntryRepository getTimeRepo() {
-        return new InMemoryTimeEntryRepository();
+    public TimeEntryRepository getTimeRepo(DataSource dataSource) {
+        return new JdbcTimeEntryRepository(dataSource);
     }
     @Bean
     public ObjectMapper dateDeserializer(){
